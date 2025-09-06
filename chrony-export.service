@@ -1,0 +1,13 @@
+[Unit]
+Description=Chrony Export Metrics
+After=multi-user.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/usr/local/
+ExecStart=/usr/bin/python3 /usr/local/bin/chrony-export.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
