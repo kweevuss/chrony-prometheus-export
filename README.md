@@ -2,17 +2,17 @@
 
 ### Background
 
-This is tested with Raspbian bookworm with chrony 4.3. 
+This is tested with Raspbian Bookworm with Chrony 4.3. 
 
-This python code will scrape, parse, and normalize data for the primary NTP selected source and runs a web server on port :9123 to allow prometheus to scrape the stats
+This Python code will scrape, parse, and normalize data for the primary NTP selected source and runs a web server on port :9123 to allow Prometheus to scrape the stats.
 
 ![Grafana-dashboard](grafana-dashboard.png)
 
 ### Install:
 
-Clone the project to a directory. Included is python file "chrony-export.py" and a systemd file. 
+Clone the project to a directory. Included is Python file "chrony-export.py" and a systemd file. 
 
-1. Copy the python file to /usr/local/bin (Assuming this is in system's path)
+1. Copy the Python file to /usr/local/bin (Assuming this is in system's path)
 
 ```sudo cp chrony-export.py /usr/local/bin/```
 
@@ -20,7 +20,7 @@ Clone the project to a directory. Included is python file "chrony-export.py" and
 
 ```cp chrony-export.service /etc/systemd/system/```
 
-3. Install prometheus python package
+3. Install Prometheus Python package
 
 ```sudo apt install python3-prometheus-client```
 
@@ -35,4 +35,4 @@ sudo systemctl status chrony-export.service
 
 5. Import Grafana dashboard
 
-Use the grafana.json file to import the dashboard built. This assumes there is a working prometheus instance connected to grafana as a data source. 
+Use the grafana.json file to import the dashboard built. This assumes there is a working Prometheus instance connected to Grafana as a data source. 
